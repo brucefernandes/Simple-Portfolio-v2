@@ -14,6 +14,21 @@ const StyledSidebar = styled.aside`
 
 `
 
+const StyledNav = styled.nav`
+    margin: 0 -1rem;
+    overflow: auto;
+    font-family: 'Raleway', sans-serif;
+    color: #869BA9;
+`
+
+const StyledLink = styled.a`
+  display: block;
+    padding: 1em;
+    text-decoration: none;
+    transition: 0.2s linear;
+    color: #869BA9;
+    font-size: 1.2rem;
+`
 
 const Sidebar = (props: Props) => {
   return (
@@ -22,14 +37,14 @@ const Sidebar = (props: Props) => {
           Bruce Fernandes
         </h3>
 
-        <nav className="menu">
-            <a href="#about" className="menu-item ">About</a>
-            <a href="#skills" className="menu-item">Skills</a>
-            <a href="#experience" className="menu-item">Experience</a>
-            <a href="#projects" className="menu-item">Projects</a>
-            <a href="#contact" className="menu-item">Contact</a>
+        <StyledNav className="menu">
+            <a href="#about" >About</a>
+            <a href="#skills" >Skills</a>
+            <a href="#experience" >Experience</a>
+            <a href="#projects" >Projects</a>
+            <a href="#contact" >Contact</a>
 
-        </nav>
+        </StyledNav>
     </StyledSidebar>
        
   )
