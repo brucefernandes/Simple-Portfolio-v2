@@ -1,7 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
+import { StyledLink } from './styled';
 
-type Props = {}
+type Props = {};
 
 const StyledSidebar = styled.aside`
         background-color: #081521;
@@ -21,33 +22,22 @@ const StyledNav = styled.nav`
     color: #869BA9;
 `
 
-const StyledLink = styled.a`
-  display: block;
-    padding: 1em;
-    text-decoration: none;
-    transition: 0.2s linear;
-    color: #869BA9;
-    font-size: 1.2rem;
-`
-
 const Sidebar = (props: Props) => {
   return (
     <StyledSidebar>
-        <h3 style={{ fontSize: "1.8rem", color: "#869BA9", marginBottom: "3.2rem", fontWeight: 200}}>
-          Bruce Fernandes
-        </h3>
+      <h3 style={{ fontSize: "1.8rem", color: "#869BA9", marginBottom: "3.2rem", fontWeight: 200 }}>
+        Bruce Fernandes
+      </h3>
 
-        <StyledNav className="menu">
-            <a href="#about" >About</a>
-            <a href="#skills" >Skills</a>
-            <a href="#experience" >Experience</a>
-            <a href="#projects" >Projects</a>
-            <a href="#contact" >Contact</a>
-
-        </StyledNav>
+      <StyledNav className="menu">
+        <StyledLink href="#about">About</StyledLink>
+        <StyledLink href="#skills">Skills</StyledLink>
+        <StyledLink href="#experience">Experience</StyledLink>
+        <StyledLink href="#projects">Projects</StyledLink>
+        <StyledLink href="#contact">Contact</StyledLink>
+      </StyledNav>
     </StyledSidebar>
-       
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;
